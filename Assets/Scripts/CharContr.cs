@@ -9,11 +9,17 @@ public class CharContr : MonoBehaviour
     Vector2 movement;
     public Animator anmtr;
     bool facingRight = true;
+    public AudioSource audioS;
+    public AudioClip sword;
 
+    private float fireRateLive;
+    public float fireRate;
+    private bool isAttacked;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anmtr = GetComponent<Animator>();
+        audioS=GetComponent<AudioSource>();
 
     }
 
@@ -22,10 +28,25 @@ public class CharContr : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1")&&!isAttacked)
         {
             anmtr.SetTrigger("attack");
+            audioS.PlayOneShot(sword);
+            fireRateLive = 0;
         }
+
+        if (fireRateLive < fireRate) 
+        { 
+        fireRateLive=fireRateLive + .3f * Time.deltaTime;
+            isAttacked = true;
+        }
+        else
+        {
+            isAttacked = false;
+        }
+
+
+
 
     }
 
