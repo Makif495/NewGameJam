@@ -638,10 +638,11 @@ MonoBehaviour:
   karakterinCani: 20
   karakterinlsmi: skeleton
   karakterinVurusGucu: 4
-  karakterinHizi: 2
+  karakterinHizi: 1
+  anim: {fileID: 899575605}
   target: {fileID: 0}
   gorusAlani: 8
-  menzil: 2
+  menzil: 1
 --- !u!1 &969600470
 GameObject:
   m_ObjectHideFlags: 0
