@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class StoryBubbleController : MonoBehaviour
 {
-    public GameObject storyBubble;
+ /*   public GameObject storyBubble;
 
     private void OnEnable()
     {
@@ -33,6 +33,6 @@ public class StoryBubbleController : MonoBehaviour
     {
         storyBubble.SetActive(false);
         Time.timeScale = 1f;
-    }
+    }       */      
 }
 
