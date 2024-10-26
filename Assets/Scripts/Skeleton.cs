@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class Skeleton : enemy
@@ -10,13 +11,21 @@ public class Skeleton : enemy
 
     void Start()
     {
-        
 
+        target = GameObject.FindGameObjectWithTag("Player").transform;
+
+    }
+    void alanKontrol()
+    {
+        if ((Vector2.Distance(target.position, transform.position)) <= gorusAlani && (Vector2.Distance(target.position,transform.position)) <= menzil);
+        {
+            transform.position = Vector2.MoveTowards(transform.position,target.position,karakterinHizi*Time.deltaTime);
+        }
     }
 
     
-    void Update()
+     private void FixedUpdate()
     {
-        
+        alanKontrol();
     }
 }

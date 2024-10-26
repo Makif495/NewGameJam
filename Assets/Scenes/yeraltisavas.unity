@@ -640,6 +640,8 @@ MonoBehaviour:
   karakterinVurusGucu: 4
   karakterinHizi: 2
   target: {fileID: 0}
+  gorusAlani: 8
+  menzil: 2
 --- !u!1 &969600470
 GameObject:
   m_ObjectHideFlags: 0
