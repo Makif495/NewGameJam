@@ -8,20 +8,20 @@ public class DusmanSayac : MonoBehaviour
     public Text DusmanSayıText;  // Düşman sayısını gösterecek UI metni
     private int dusmanSayısı;        // Mevcut düşman sayısı
     GameObject Dusman;
-    void Start() {
+    void Update() {
         UpdateEnemyCount();
     }
 
     // Düşman sayısını günceller
     public void UpdateEnemyCount() {
         dusmanSayısı = GameObject.FindGameObjectsWithTag("Dusman").Length;
-        DusmanSayıText.text = "Enemies Left: " + dusmanSayısı;
+        DusmanSayıText.text = ": " + dusmanSayısı;
     }
 
     // Düşman öldüğünde çağrılacak
     public void OnEnemyDefeated() {
         dusmanSayısı--;
-        DusmanSayıText.text = "Enemies Left: " + dusmanSayısı;
+        DusmanSayıText.text = ": " + dusmanSayısı;
 
         if (dusmanSayısı <= 0) {
             Debug.Log("Tüm düşmanlar yenildi! Savaş sona erdi.");
