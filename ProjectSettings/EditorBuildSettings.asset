@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AyarEkrani.unity
     guid: 73253fa7d49a88340b522d8db9fa1a68
+  - enabled: 1
+    path: Assets/Scenes/Tuccar.unity
+    guid: 1461521031a13f44f9e9e4de230757a8
   m_configObjects: {}
