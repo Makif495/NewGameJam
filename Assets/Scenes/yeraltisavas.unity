@@ -3332,7 +3332,7 @@ GameObject:
   - component: {fileID: 1097721139}
   - component: {fileID: 1097721138}
   - component: {fileID: 1097721141}
-  - component: {fileID: 1097721140}
+  - component: {fileID: 1097721142}
   m_Layer: 0
   m_Name: stock-photo-blue-portal-pixel-art-portal-gate-game-retro-bit-2202162905-removebg-preview
   m_TagString: Untagged
@@ -3407,19 +3407,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1097721140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097721137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5aac26c51c0fd240bcc56466275ae4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anmtr: {fileID: 0}
 --- !u!61 &1097721141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3449,7 +3436,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 6.2371936, y: -8.979699}
@@ -3465,6 +3452,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.207366, y: 14.290602}
   m_EdgeRadius: 0
+--- !u!114 &1097721142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097721137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23734d95eed934d4da2feae5c5611b6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1439246152
 GameObject:
   m_ObjectHideFlags: 0
