@@ -23,14 +23,14 @@ using UnityEngine.UI;
 }*/
 public class DusmanSayac : MonoBehaviour
 {
-   public Text dusmanSayacText;
+   public Text dusmanSayacYazý;
    public int dusmanSayisi = 0;
-
+  GameObject[] dusman;
     void Start()
     {
-        DusmanGuncelle();
+        //DusmanGuncelle();
     }
-
+    /*
     //Düþmaný güncelleyecek
     public void DusmanGuncelle() {
         dusmanSayisi = GameObject.FindGameObjectsWithTag("Dusman").Length;
@@ -47,4 +47,10 @@ public class DusmanSayac : MonoBehaviour
         }
     }
 
+*/
+
+    private void Update() {
+        dusman = GameObject.FindGameObjectsWithTag("dusman");
+        dusmanSayacYazý.text = "Kalan Düþman\r\n" + dusman.Length.ToString();
+    }
 }
