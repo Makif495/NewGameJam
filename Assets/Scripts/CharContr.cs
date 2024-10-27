@@ -11,6 +11,7 @@ public class CharContr : MonoBehaviour
     bool facingRight = true;
     public AudioSource audioS;
     public AudioClip sword;
+    public enemy enemy;
 
     private float fireRateLive;
     public float fireRate;
@@ -27,6 +28,7 @@ public class CharContr : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
 
         if (Input.GetButtonDown("Fire1")&&!isAttacked)
         {
@@ -45,6 +47,10 @@ public class CharContr : MonoBehaviour
             isAttacked = false;
         }
 
+        if (enemy.isHiting == true)
+        {
+            getDamage();
+        }
 
 
 
@@ -78,6 +84,9 @@ public class CharContr : MonoBehaviour
             flip();
             facingRight = !facingRight;
         }
+       
+        
+
 
 
         void flip()
@@ -85,5 +94,17 @@ public class CharContr : MonoBehaviour
             transform.Rotate(0, 180f, 0);
         }
 
+        
+
+
+
+ }
+    void getDamage()
+    {
+        anmtr.SetTrigger("getDamage");
     }
+
+
+
+
 }
