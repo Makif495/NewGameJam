@@ -9,6 +9,8 @@ public class Skeleton : enemy
     public Transform target;
     public float gorusAlani;
     public float menzil;
+    public enemy enemyy;
+    private bool atakYapabilir = false;
 
     void Start()
     {
@@ -29,13 +31,31 @@ public class Skeleton : enemy
         }
     
     }
+    private void FixedUpdate()
+    {
+        if (atakHizi > mevcutAtakHizi)
+        {
+            mevcutAtakHizi = mevcutAtakHizi + .5f;
+            atakYapabilir = false;
+            isHiting = false;
+        }
 
-    
-     private void Update()
+        else
+        {
+            mevcutAtakHizi = atakHizi; 
+            atakYapabilir=true; 
+        }
+
+
+
+    }
+
+
+    private void Update()
     {
         alanKontrol();
 
-        if ((Vector2.Distance(target.position, transform.position)) <= menzil)
+        if ((Vector2.Distance(target.position, transform.position)) <= menzil&& atakYapabilir)
         {
             
                   attack();
@@ -45,6 +65,9 @@ public class Skeleton : enemy
 
     void attack()
     {
+        atakYapabilir = false;
+        isHiting = true;
         anim.SetTrigger("attack");
+        mevcutAtakHizi = 0;
     }
 }

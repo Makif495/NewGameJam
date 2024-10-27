@@ -231,6 +231,7 @@ MonoBehaviour:
   anmtr: {fileID: 0}
   audioS: {fileID: 0}
   sword: {fileID: 0}
+  enemy: {fileID: 899575611}
   fireRate: 0
 --- !u!95 &149650022
 Animator:
@@ -458,7 +459,7 @@ GameObject:
   - component: {fileID: 899575611}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -639,10 +640,14 @@ MonoBehaviour:
   karakterinlsmi: skeleton
   karakterinVurusGucu: 4
   karakterinHizi: 1
+  isHiting: 0
+  atakHizi: 3
+  mevcutAtakHizi: 0
   anim: {fileID: 899575605}
   target: {fileID: 0}
   gorusAlani: 8
   menzil: 1
+  enemyy: {fileID: 0}
 --- !u!1 &969600470
 GameObject:
   m_ObjectHideFlags: 0

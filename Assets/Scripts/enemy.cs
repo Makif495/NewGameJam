@@ -8,5 +8,7 @@ public class enemy : MonoBehaviour
     public string karakterinlsmi;
     public int karakterinVurusGucu;
     public float karakterinHizi;
-    [HideInInspector] public bool isHiting; 
+    [HideInInspector] public bool isHiting;
+    public float atakHizi;
+    [HideInInspector]public float mevcutAtakHizi;
 }
