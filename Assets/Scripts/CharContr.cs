@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class CharContr : MonoBehaviour
@@ -17,15 +16,12 @@ public class CharContr : MonoBehaviour
     private float fireRateLive;
     public float fireRate;
     private bool isAttacked;
-    [HideInInspector]public bool isAttackingToEnemy;
-    private bool attackedToEnemy;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anmtr = GetComponent<Animator>();
         audioS=GetComponent<AudioSource>();
 
-        attackedToEnemy = false;
     }
 
     private void Update()
@@ -33,23 +29,12 @@ public class CharContr : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-       
 
-            if (Input.GetButtonDown("Fire1")&&!isAttacked)
+        if (Input.GetButtonDown("Fire1")&&!isAttacked)
         {
             anmtr.SetTrigger("attack");
             audioS.PlayOneShot(sword);
             fireRateLive = 0;
-
-            if (attackedToEnemy==true)
-            {
-                
-                isAttackingToEnemy = true;
-            }
-      
-        
-        
-        
         }
 
         if (fireRateLive < fireRate) 
@@ -60,7 +45,6 @@ public class CharContr : MonoBehaviour
         else
         {
             isAttacked = false;
-            isAttackingToEnemy = false;
         }
 
         if (enemy.isHiting == true)
@@ -69,7 +53,7 @@ public class CharContr : MonoBehaviour
 
         }
 
-        
+
 
     }
 
@@ -119,26 +103,9 @@ public class CharContr : MonoBehaviour
     void getDamage()
     {
         anmtr.SetTrigger("getDamage");
-        Debug.Log("sfdsdfsd");
-
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {  
-            attackedToEnemy = true;
-        }
-    }
 
-    
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.gameObject.CompareTag("Enemy"))
-        {
-            attackedToEnemy=false;
-        }
-    }
 
 }
