@@ -50,6 +50,7 @@ public class CharContr : MonoBehaviour
         if (enemy.isHiting == true)
         {
             getDamage();
+
         }
 
 
