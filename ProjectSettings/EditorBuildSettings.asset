@@ -12,12 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/girisEkrani.unity
     guid: 321a1da7b9510554ca6b266753f2a3d3
   - enabled: 1
-    path: Assets/Scenes/makif.unity
+    path: "Assets/Scenes/K\xF6yEkran\u0131.unity"
     guid: eb8873c9e8585c84684035122e43a891
   - enabled: 1
     path: Assets/Scenes/yeraltisavas.unity
     guid: c8d388b02eb22164eacabcefb588d484
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Scenes/MainMen\xFC 1.unity"
     guid: d849152f0620fa84a808712a8b9160b6
+  - enabled: 1
+    path: Assets/Scenes/AyarEkrani.unity
+    guid: 73253fa7d49a88340b522d8db9fa1a68
   m_configObjects: {}
