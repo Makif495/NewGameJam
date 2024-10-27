@@ -16,11 +16,13 @@ public class CharContr : MonoBehaviour
     private float fireRateLive;
     public float fireRate;
     private bool isAttacked;
+    CharContr charContr;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anmtr = GetComponent<Animator>();
         audioS=GetComponent<AudioSource>();
+        charContr=new CharContr();
 
     }
 
@@ -49,7 +51,7 @@ public class CharContr : MonoBehaviour
 
         if (enemy.isHiting == true)
         {
-            getDamage();
+            charContr.getDamage();
 
         }
 
