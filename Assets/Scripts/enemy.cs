@@ -11,4 +11,6 @@ public class enemy : MonoBehaviour
     [HideInInspector] public bool isHiting;
     public float atakHizi;
     [HideInInspector]public float mevcutAtakHizi;
+
+
 }
