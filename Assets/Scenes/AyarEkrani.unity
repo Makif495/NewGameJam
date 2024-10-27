@@ -648,7 +648,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AYAR2
+  m_Text: Grafik Kalitesi
 --- !u!222 &1186354305
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -923,7 +923,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: AYAR1
+  m_Text: Tam Ekran
 --- !u!222 &1748004944
 CanvasRenderer:
   m_ObjectHideFlags: 0
