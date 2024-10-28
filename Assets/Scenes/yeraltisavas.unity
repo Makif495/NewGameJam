@@ -231,7 +231,7 @@ MonoBehaviour:
   anmtr: {fileID: 0}
   audioS: {fileID: 0}
   sword: {fileID: 0}
-  enemy: {fileID: 0}
+  enemy: {fileID: 899575611}
   fireRate: 0
 --- !u!95 &149650022
 Animator:
@@ -3567,11 +3567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924911138138455457, guid: eb067e18fa7ad80419f4bb981d0364c3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 680
+      value: 619
       objectReference: {fileID: 0}
     - target: {fileID: 3924911138138455457, guid: eb067e18fa7ad80419f4bb981d0364c3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 96
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 4369219558297909177, guid: eb067e18fa7ad80419f4bb981d0364c3, type: 3}
       propertyPath: m_Name
